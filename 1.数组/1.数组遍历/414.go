@@ -28,10 +28,15 @@ func thirdMax(nums []int) int {
 			third = i
 		}
 	}
-	if len(nums) < 3 && first != math.MinInt64 {
-		return first
-	}
-	if third == math.MinInt64 && first != math.MinInt64 {
+	// if len(nums) < 3 && first != math.MinInt64 {
+	// 	return first
+	// }
+	// if third == math.MinInt64 && first != math.MinInt64 {
+	// 	return first
+	// }
+
+	// 题目中至少有一个元素
+	if third == math.MinInt64 {
 		return first
 	}
 	return third
@@ -39,7 +44,7 @@ func thirdMax(nums []int) int {
 
 func main() {
 	// a := []int{2, 2, 3, 1}
-	fmt.Println(math.MinInt32)
+	fmt.Println(math.MinInt64)
 	a := []int{1, 1, 2}
 	ret := thirdMax(a)
 	fmt.Println(ret)
